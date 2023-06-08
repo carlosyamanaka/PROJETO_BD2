@@ -16,7 +16,7 @@ import java.util.Date;
 public class Pedido {
 
     //FOREIGN KEY(id_usuario) REFERENCES Usuario(id_usuario);
-
+    //Teste
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_pedido;
