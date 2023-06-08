@@ -17,12 +17,13 @@ public class Item_Pedido {
     private Integer id_itempedido;
 
     @Column(nullable = false)
-    private Integer id_pedido;
-
-    @Column(nullable = false)
-    private Integer id_produto;
-
-    @Column(nullable = false)
     private Integer quantidade;
 
+    @ManyToOne
+    @JoinColumn(name = "id_pedido", nullable = false)
+    private Pedido pedido;
+
+    @ManyToOne
+    @JoinColumn(name = "id_produto", nullable = false)
+    private Produto produto;
 }
