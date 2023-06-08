@@ -1,4 +1,4 @@
-package com.example.pecprojeto;
+package com.example.pecprojeto.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
