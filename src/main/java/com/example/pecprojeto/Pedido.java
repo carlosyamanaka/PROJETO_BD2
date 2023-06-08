@@ -21,10 +21,15 @@ public class Pedido {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_pedido;
 
-    @
+    @Column(name = "sales_date", nullable = false)
     private LocalDate data;
 
+    @Column()
     private Integer id_usuario;
+
+    @ManyToOne
+    @JoinColumn(name = "id_usuario")
+    private Usuario usuario;
 
 
 }
