@@ -14,10 +14,10 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_produto;
 
-    @Column(length = 50, nullable = false)
+    @Column(name = "nome",length = 50, nullable = false)
     private String nome;
 
-    @Column(length = 10, precision = 2, nullable = true)
+    @Column(name = "preco",length = 10, precision = 2)
     private Long preco;
 
 }

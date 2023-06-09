@@ -19,13 +19,11 @@ public class Pedido {
     //Teste
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_pedido")
     private Integer id_pedido;
 
-    @Column(name = "sales_date", nullable = false)
+    @Column(name = "data", nullable = false)
     private LocalDate data;
-
-    @Column()
-    private Integer id_usuario;
 
     @ManyToOne
     @JoinColumn(name = "id_usuario")

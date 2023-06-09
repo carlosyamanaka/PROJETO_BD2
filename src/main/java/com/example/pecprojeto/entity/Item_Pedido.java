@@ -16,7 +16,7 @@ public class Item_Pedido {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_itempedido;
 
-    @Column(nullable = false)
+    @Column(name = "quantidade")
     private Integer quantidade;
 
     @ManyToOne
