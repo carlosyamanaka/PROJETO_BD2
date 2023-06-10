@@ -8,13 +8,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
-@Controller
-@RequestMapping("/usuario")
+@RestController
+@RequestMapping(value = "/usuario")
 public class UsuarioController {
 
-    private UsuarioRepository usuarioRepository;
+    private final UsuarioRepository usuarioRepository;
 
     public UsuarioController (@Autowired UsuarioRepository usuarioRepository){
         this.usuarioRepository = usuarioRepository;

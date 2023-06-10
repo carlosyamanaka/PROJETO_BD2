@@ -1,5 +1,6 @@
 package com.example.pecprojeto.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,6 +17,7 @@ public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_usuario")
     private Integer id_usuario;
 
     @Column(name = "nome")
@@ -31,8 +33,9 @@ public class Usuario {
     private String endereco;
 
     @Column(name = "telefone")
-    private Integer telefone;
+    private Long telefone;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "usuario")
     private List<Pedido> pedidos;
 

@@ -1,4 +1,4 @@
-package com.example.pecprojeto.entity;
+package com.example.pecprojeto;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

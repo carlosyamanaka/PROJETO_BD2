@@ -14,6 +14,7 @@ public class Item_Pedido {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_itempedido")
     private Integer id_itempedido;
 
     @Column(name = "quantidade")
