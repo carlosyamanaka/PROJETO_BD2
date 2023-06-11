@@ -1,9 +1,12 @@
 package com.example.pecprojeto.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -20,11 +23,16 @@ public class Item_Pedido {
     @Column(name = "quantidade")
     private Integer quantidade;
 
-    @ManyToOne
-    @JoinColumn(name = "id_pedido", nullable = false)
-    private Pedido pedido;
+    @Column(name = "id_pedido", nullable = false)
+    private Integer id_pedido;
 
-    @ManyToOne
-    @JoinColumn(name = "id_produto", nullable = false)
-    private Produto produto;
+    @Column(name = "id_produto", nullable = false)
+    private Integer id_produto;
+
+    @Transient
+    private String nome;
+
+    @Transient
+    private BigDecimal preco;
+
 }

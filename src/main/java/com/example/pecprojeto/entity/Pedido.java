@@ -16,8 +16,6 @@ import java.util.List;
 @Table(name = "pedido")
 public class Pedido {
 
-    //FOREIGN KEY(id_usuario) REFERENCES Usuario(id_usuario);
-    //Teste
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_pedido")
@@ -26,12 +24,7 @@ public class Pedido {
     @Column(name = "data", nullable = false)
     private LocalDate data;
 
-    @JsonIgnore
-    @ManyToOne
-    @JoinColumn(name = "id_usuario")
-    private Usuario usuario;
-
-    @OneToMany(mappedBy = "pedido", fetch = FetchType.LAZY)
-    private List<Item_Pedido> items;
+    @Column(name = "id_usuario")
+    private Integer id_usuario;
 
 }

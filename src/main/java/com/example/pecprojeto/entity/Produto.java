@@ -3,6 +3,8 @@ package com.example.pecprojeto.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -18,7 +20,7 @@ public class Produto {
     @Column(name = "nome")
     private String nome;
 
-    @Column(name = "preco")
-    private Long preco;
+    @Column(length = 20, precision = 20, scale = 2, nullable = false, name = "preco")
+    private BigDecimal preco;
 
 }

@@ -35,9 +35,4 @@ public class Usuario {
     @Column(name = "telefone")
     private Long telefone;
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "usuario")
-    private List<Pedido> pedidos;
-
-
 }
