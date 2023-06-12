@@ -35,16 +35,6 @@ public class UsuarioController {
         }
     }
 
-    @PutMapping()
-    public ResponseEntity put (@RequestBody Usuario usuario){
-        Optional<Usuario> userToEdit = usuarioRepository.findById(usuario.getId_usuario());
-        if(userToEdit.isPresent()){
-            usuarioRepository.save(usuario);
-            return  new ResponseEntity<>(usuario, HttpStatus.OK);
-        }
-        return ResponseEntity.notFound().build();
-    }
-
     @DeleteMapping("{id_usuario}")
     public ResponseEntity delete(@PathVariable Integer id_usuario){
         try{
