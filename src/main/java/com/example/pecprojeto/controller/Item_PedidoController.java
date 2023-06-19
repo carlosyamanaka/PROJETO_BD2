@@ -20,6 +20,15 @@ import java.util.stream.Collectors;
 public class Item_PedidoController {
 
 
+    /*Aqui foi desenvolvido o controller referente ao Item_Pedido*/
+
+    /*O controller é responsável por receber as requisições HTTP
+    e as direcionar para os métodos adequados no repositório,
+    permitindo a implementação da lógica de negócio e retornando
+    as respostas correspondentes.*/
+
+
+    /*/Abaixo foram declarados os repositórios utilizados, no caso, Produto e Item_Pedido*/
     private final ProdutoRepository produtoRepository;
     private final Item_PedidoRepository item_pedidoRepository;
 
@@ -28,6 +37,7 @@ public class Item_PedidoController {
         this.item_pedidoRepository = item_pedidoRepository;
     }
 
+    /*Permite a exibição do relatório envolvendo uma operação JOIN*/
     @GetMapping("/itempedidoproduto")
     public ResponseEntity getItemPedidoProduto(){
         List<Item_Pedido> itemPedidos = item_pedidoRepository.buscarItemPedidoProduto().stream().map(itemPedido -> {
@@ -39,6 +49,8 @@ public class Item_PedidoController {
         return new ResponseEntity<>(itemPedidos, HttpStatus.OK);
     }
 
+    /*Permite exibição do relatório utilizando uma visão previamente
+    criada em uma consulta*/
     @GetMapping("/itempedidopedido")
     public ResponseEntity getItemPedidoPedido(){
         List<ItemPedidoPedidoDTO> itemPedidoPedido = item_pedidoRepository.buscarItemPedidoPedido();

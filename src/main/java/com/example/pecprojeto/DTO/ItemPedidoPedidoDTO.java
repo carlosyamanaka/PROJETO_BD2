@@ -12,6 +12,10 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class ItemPedidoPedidoDTO {
 
+    /*DTO ou Data Transfer Object é feito para facilitar
+    a transferência de dados e informações entre o Repositório(Banco de dados)
+     e o Controller*/
+
     private Integer id_pedido;
     private Integer id_itempedido;
     private Integer quantidade;

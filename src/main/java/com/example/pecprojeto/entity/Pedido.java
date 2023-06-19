@@ -16,6 +16,11 @@ import java.util.List;
 @Table(name = "pedido")
 public class Pedido {
 
+    /*Mapeada a entidade referente ao Pedido*/
+
+    /*Entidade se trata da representação em código de objetos reais,
+    nesse caso foi mapeada a entidade referente ao Pedido*/
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_pedido")

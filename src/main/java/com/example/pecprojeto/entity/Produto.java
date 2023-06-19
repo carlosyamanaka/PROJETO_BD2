@@ -12,6 +12,11 @@ import java.math.BigDecimal;
 @Table(name = "produto")
 public class Produto {
 
+    /*Mapeada a entidade referente ao Produto*/
+
+    /*A entidade se trata da representação em código de objetos reais.
+    Nesse caso, foi mapeada a entidade referente ao Produto.*/
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_produto")

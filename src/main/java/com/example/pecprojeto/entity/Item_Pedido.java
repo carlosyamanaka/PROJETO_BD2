@@ -16,6 +16,11 @@ import java.math.BigDecimal;
 @Table(name = "Item_Pedido")
 public class Item_Pedido {
 
+    /*Mapeada a entidade referente ao Item_pedido*/
+
+    /*Entidade se trata da representação em código de objetos reais,
+    nesse caso foi mapeada a entidade referente ao Item Pedido*/
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_itempedido")
